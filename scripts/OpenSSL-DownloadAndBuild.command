@@ -9,7 +9,7 @@
 
 ## Settings
 # openssl version to use
-OPENSSLVERSION="1.0.2a"
+OPENSSLVERSION="1.0.2h"
 MD5SUM="577585f5f5d299c44dd3c993d3c0ac7a219e4949"
 # SDK version to use - if not set latest version found is used
 SDK_VERSION=""
