@@ -10,7 +10,7 @@
 ## Settings
 # openssl version to use
 OPENSSLVERSION="1.0.2a"
-MD5SUM="a06c547dac9044161a477211049f60ef"
+MD5SUM="577585f5f5d299c44dd3c993d3c0ac7a219e4949"
 # SDK version to use - if not set latest version found is used
 SDK_VERSION=""
 
@@ -102,7 +102,7 @@ CS=`md5 -q "openssl-$OPENSSLVERSION.tar.gz" 2>/dev/null`
 if [ ! "$CS" = "$MD5SUM" ]; then
     echo "Downloading OpenSSL Version $OPENSSLVERSION ..."
     rm -f "openssl-$OPENSSLVERSION.tar.gz"
-    curl -o "openssl-$OPENSSLVERSION.tar.gz" http://www.openssl.org/source/openssl-$OPENSSLVERSION.tar.gz
+    curl -o "openssl-$OPENSSLVERSION.tar.gz" ftp://ftp.openssl.org/source/openssl-$OPENSSLVERSION.tar.gz
 
     CS=`md5 -q "openssl-$OPENSSLVERSION.tar.gz" 2>/dev/null`
     if [ ! "$CS" = "$MD5SUM" ]; then
