@@ -96,7 +96,7 @@ CS=`md5 -q "openssl-$OPENSSLVERSION.tar.gz" 2>/dev/null`
 if [ ! "$CS" = "$MD5SUM" ]; then
     echo "Downloading OpenSSL Version $OPENSSLVERSION ..."
     rm -f "openssl-$OPENSSLVERSION.tar.gz"
-    curl -o "openssl-$OPENSSLVERSION.tar.gz" http://www.openssl.org/source/openssl-$OPENSSLVERSION.tar.gz
+    curl -o "openssl-$OPENSSLVERSION.tar.gz" ftp://ftp.openssl.org/source/openssl-$OPENSSLVERSION.tar.gz
     CS=`md5 -q "openssl-$OPENSSLVERSION.tar.gz" 2>/dev/null`
     if [ ! "$CS" = "$MD5SUM" ]; then
 	echo "Download failed or invalid checksum. Have a nice day."
