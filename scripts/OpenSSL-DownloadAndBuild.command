@@ -126,8 +126,6 @@ mkdir -p ../../include/openssl
 rm -f ../../include/openssl/*.h
 mkdir -p ../../lib
 rm -f ../../lib/*.a
-echo "Copying header files ..."
-cp include/openssl/*.h ../../include/openssl/
 echo
 for i in ${ARCHS}; do
 	buildArch $i
@@ -135,4 +133,7 @@ done
 echo "Combining to unversal binary"
 lipo -create ../../lib/libcrypto_*.a -o ../../lib/libcrypto.a
 lipo -create ../../lib/libssl_*.a -o ../../lib/libssl.a
+echo "Copying header files ..."
+cp include/openssl/*.h ../../include/openssl/
+echo
 echo "Finished. Please verify the contens of the openssl folder in \"$INSTALLDIR\""
